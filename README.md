@@ -18,7 +18,7 @@ This Python script captures keystrokes and logs them into a file named "Keylog.t
 - Microsoft Azure Virtual Machine
 - Microsoft Windows 10 Pro
 - Microsoft Visual Studio Code
-- Python3
+- Python
 
 ### Prerequisites
 - pynput Python package installed
