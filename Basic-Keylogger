@@ -36,8 +36,8 @@ def on_press(key):
                     #Set format for writing repeated phrase
                     output_file.write(f"Phrase '{phrase}' repeated {phrase_counts[phrase]} times\n")
     
-    # Exclude Key.space and Key.backspace from being recorded
-    elif key != Key.space and key != Key.backspace: 
+    # Exclude Key.space, Key.backspace, and Key.tab from being recorded
+    elif key != Key.space and key != Key.backspace and key != Key.tab: 
         current_phrase += str(key)
 
 
