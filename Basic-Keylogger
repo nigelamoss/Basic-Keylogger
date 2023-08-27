@@ -16,15 +16,13 @@ phrase_counts = defaultdict(int)
 def on_press(key):
     global current_phrase
     
-    #Set actions for when ENTER key is pressed
-    if key == Key.enter:
+    #Set actions for when ENTER key or TAB key is pressed
+    if key == Key.enter or key == Key.tab:  # Reset current phrase for both Enter and Tab
         if current_phrase:
-            #Log phrase with apostrophies removed
+             #Log phrase with apostrophies removed
             logging.info(current_phrase.replace("'", ""))
-            
-            #Count occurance of current phrase
-            phrase_counts[current_phrase] += 1  
-            
+             #Count occurance of current phrase
+            phrase_counts[current_phrase] += 1
             #Reset current phrase
             current_phrase = ""
             
@@ -33,21 +31,17 @@ def on_press(key):
             #Write repeated phrase to "RepeatedPhrases.txt" file
             with open("RepeatedPhrases.txt", "w") as output_file:
                 for phrase in repeated_phrases:
-                    #Set format for writing repeated phrase
                     output_file.write(f"Phrase '{phrase}' repeated {phrase_counts[phrase]} times\n")
     
-    # Exclude Key.space, Key.backspace, and Key.tab from being recorded
-    elif key != Key.space and key != Key.backspace and key != Key.tab: 
+    # Exclude Key.space, Key.backspace, and Key.tab from being recorded                
+    elif key != Key.space and key != Key.backspace and key != Key.shift and key != Key.cmd and key != Key.tab:
         current_phrase += str(key)
-
-
 
 #Function for when a key is released
 def on_release(key):
-    #Stop listener if ESC is pressed
     if key == Key.esc:
         return False
-
-#Define when to start and stp listener
+    
+#Define when to start and stop listener
 with Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
