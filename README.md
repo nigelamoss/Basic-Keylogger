@@ -8,7 +8,7 @@ A Python script designed to capture keystrokes and parse the captured data for r
 ## What is a Keylogger?
 A keylogger is a type of software or hardware device designed to record and monitor keystrokes on a computer keyboard. Typically, malicious actors use keyloggers to capture the keys pressed by a user, including passwords, credit card numbers, personal messages, and any other sensitive information that might be typed into the computer.
 
-## What does this keylogger do?
+## What does this Keylogger do?
 This Python script captures keystrokes and logs them into a file named "Keylog.txt". Additionally, it keeps track of the repetition of phrases and saves information about repeated phrases in a file named "RepeatedPhrases.txt". 
 
 ## Demonstration
