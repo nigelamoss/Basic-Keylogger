@@ -2,7 +2,7 @@
 
 **NOTE:** This script was created for educational purposes only. Please remember that using keyloggers without proper authorization is unethical and may be illegal. It's important to respect privacy and follow the laws and regulations in your jurisdiction. If you intend to use such scripts for legitimate purposes, ensure that you have explicit consent and comply with all relevant laws and regulations.
 
-## Description: 
+## Description
 A Python script designed to capture keystrokes and parse the captured data for repeated phrases. 
 
 ## What is a Keylogger?
@@ -14,7 +14,7 @@ This Python script captures keystrokes and logs them into a file named "Keylog.t
 ## Demonstration
 **NOTE:** Although this script can be run in many different enviornments, this demonstration utilizes the software/hardware listed below.
 
-### Sotware/Hardware Used: 
+### Software/Hardware Used: 
 - Microsoft Azure Virtual Machine
 - Microsoft Windows 10 Pro
 - Microsoft Visual Studio Code
